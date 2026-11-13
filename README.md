@@ -22,6 +22,8 @@ Source: `PROJECTS.md` (Online Business Models: Proven Abroad, Underdeveloped in 
 
 Scaffolded as a Next.js 16 + Drizzle (Postgres) app. The schema in `src/db/schema.ts` is the current source of truth for the data model; auth and payment integrations are not yet wired up.
 
+Requires Node.js 20.19.0 or later, or Node.js 22.9.0 or later. Earlier versions do not support the `--env-file-if-exists` flag used by `db:migrate` and `db:seed`.
+
 ```
 npm install
 # point .env at a Postgres instance, see .env.example
