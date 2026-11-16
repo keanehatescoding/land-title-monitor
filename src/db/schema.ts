@@ -83,7 +83,7 @@ export const parcels = pgTable(
     kind: parcelKindEnum("kind").notNull().default("freehold"),
     label: text("label").notNull(),
     // How often to re-pull the registry search. Nulls mean paused.
-    monitorIntervalDays: integer("monitor_interval_days").default(7).nullable(),
+    monitorIntervalDays: integer("monitor_interval_days").default(7),
     monitoringPausedAt: timestamp("monitoring_paused_at", { withTimezone: true }),
     ...timestamps,
   },
