@@ -2,20 +2,32 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The project is currently at version 0.1.0 (see `package.json`). Only the current development line receives security updates; there are no released 4.x or 5.x lines.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 0.1.x   | :white_check_mark: |
+| < 0.1   | :x:                |
+
+Version 0.1.0 is the current supported version. Older versions are not supported.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please report security vulnerabilities privately. Do not open a public issue for a suspected vulnerability.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- **Preferred channel:** GitHub's private vulnerability reporting — open a report at
+  https://github.com/keanehatescoding/land-title-monitor/security/advisories/new
+- **Alternative:** If private reporting is unavailable, contact the maintainer through GitHub
+  (https://github.com/keanehatescoding) with a description of the issue.
+
+What to expect:
+
+- Acknowledgement of your report within 72 hours.
+- A status update at least every 7 days while the issue is being investigated.
+- If the vulnerability is accepted, a fix will be developed and released, and you will be
+  credited in the release notes unless you request otherwise.
+- If the vulnerability is declined (for example, it is out of scope or cannot be reproduced),
+  you will receive an explanation. Please allow time for triage before following up.
+
+Please include, where possible: a description of the issue, steps to reproduce, the affected
+version/commit, and any suggested mitigation.
