@@ -17,9 +17,9 @@ Please report security vulnerabilities privately. Do not open a public issue for
 
 - **Preferred channel:** GitHub's private vulnerability reporting — open a report at
   https://github.com/keanehatescoding/land-title-monitor/security/advisories/new
-- **Alternative:** If private reporting is unavailable, email the maintainer privately at
-  `159132270+keanehatescoding@users.noreply.github.com` with a description of the issue.
-  Do not post vulnerability details publicly.
+- **Alternative:** If private reporting is unavailable, contact the maintainer through GitHub
+  (https://github.com/keanehatescoding) with a description of the issue. Do not post
+  vulnerability details publicly.
 
 What to expect:
 
