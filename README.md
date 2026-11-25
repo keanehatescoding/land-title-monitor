@@ -45,3 +45,28 @@ What is still a stub:
 - Auth (sessions, password reset, email verify).
 - Payments (M-Pesa Daraja / Paystack / card).
 - Product UI and monitoring/alerting flows beyond the initial schema and landing page.
+
+## Deploying
+
+Railway deploys this service from `master`. `.railway/railway.ts` is the source
+of truth for the environment: apply it with `railway config apply`. It builds
+with Railpack, runs `npm run db:migrate` before each deploy, and checks
+`/api/health` (which queries Postgres, not just the app process) before
+routing traffic to the new version.
+
+Set secrets on Railway itself, never in the repository:
+
+```
+railway variables --service land-title-monitor --set APP_URL=https://<your-public-host>
+```
+
+`DATABASE_URL` is injected from the Postgres service declared in `railway.ts`.
+
+To run the same shape locally: `docker compose up --wait db`, then put
+`DATABASE_URL=postgres://app:app@localhost:5432/app` in `.env`, run
+`npm run db:migrate` and `npm run dev`. `docker compose down` keeps the data
+volume; add `-v` to remove it.
+
+For a self-hosted container deployment, `docker build -t land-title-monitor .` produces a
+production image that applies migrations and then starts the app. Its
+`HEALTHCHECK` uses the same `/api/health` endpoint.
